@@ -1,0 +1,500 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Pare de Amar Quem Te Machuca — Método PARE</title>
+<meta name="description" content="Um método prático de quatro passos para reconhecer o padrão a tempo, interromper o automático e parar de se abandonar por amor. Com o Diário da Rachadura e o Guia de Respostas.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Pare de Amar Quem Te Machuca — Método PARE">
+<meta property="og:description" content="Não é azar. É um padrão. E ele começa sempre no mesmo instante.">
+<meta property="og:image" content="og.jpg">
+<meta property="og:locale" content="pt_BR">
+<meta name="theme-color" content="#2A1C1C">
+<link rel="icon" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>
+:root{
+  --papel:#F7EEE6; --papel-prof:#F0E2D3; --papel-rosa:#FBF1ED;
+  --tinta:#2A1C1C; --vinho:#7A2E2E; --vinho-fundo:#5E2222;
+  --sepia:#B08350;         /* filete, numeral, rotulo sobre a tinta */
+  --sepia-texto:#825426;   /* o mesmo sepia, escurecido ate 5,65:1 sobre o papel */
+  --rosa:#E8C9C4; --suave:#786C69;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--papel);color:var(--tinta);
+  font-family:'IBM Plex Sans',system-ui,-apple-system,sans-serif;
+  font-size:17px;line-height:1.6;text-rendering:optimizeLegibility}
+img{max-width:100%;height:auto;display:block}
+a{color:var(--vinho);text-decoration:none}
+h1,h2,h3,.disp{font-family:Fraunces,Georgia,serif;font-weight:500;margin:0;
+  line-height:1.14;text-wrap:pretty}
+p{margin:0;text-wrap:pretty}
+
+.wrap{width:100%;max-width:1040px;margin:0 auto;padding:0 24px}
+.wrap.estreito{max-width:820px}
+.sec{padding:clamp(52px,7vw,88px) 0}
+#comprar{scroll-margin-top:80px}
+html{scroll-behavior:smooth}
+.esc{background:var(--tinta);color:var(--papel)}
+.prof{background:var(--papel-prof)}
+
+.rot{font-size:11.5px;letter-spacing:.28em;text-transform:uppercase;
+  color:var(--sepia-texto);font-weight:600}
+.rot.claro{color:var(--sepia)}   /* sobre a tinta o sepia original ja da 4,85:1 */
+.col{display:flex;flex-direction:column}
+.g14{gap:14px}.g18{gap:18px}.g22{gap:22px}.g30{gap:30px}
+.centro{text-align:center;align-items:center}
+
+.cta{display:inline-block;background:var(--vinho);color:var(--papel);
+  padding:20px 46px;font-size:18px;font-weight:600;border-radius:2px;
+  text-align:center;transition:background .15s}
+.cta:hover{background:var(--vinho-fundo);color:var(--papel)}
+.cta.larga{display:block;width:100%;padding:22px 20px;font-size:19px}
+.selo{font-size:13.5px;letter-spacing:.06em;color:rgba(247,238,230,.62)}
+
+.grade{display:grid;gap:24px}
+.g2{grid-template-columns:repeat(2,minmax(0,1fr))}
+.g3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.g4{grid-template-columns:repeat(4,minmax(0,1fr))}
+
+/* Topo sem fotografia. A imagem ja foi o criativo que a trouxe ate aqui;
+   repetir esse trabalho no topo custa a dobra. O que segura um hero de texto
+   e hierarquia: salto grande de escala, uma cor de acento so, e respiro.
+   O filete dourado e a fresta da editora reduzida a um traco. */
+.hero{position:relative;display:flex;align-items:center;justify-content:center;
+  overflow:hidden;text-align:center;min-height:min(84vh,760px);
+  background:
+    radial-gradient(120% 78% at 50% -14%,rgba(122,46,46,.55) 0%,rgba(42,28,28,0) 62%),
+    radial-gradient(80% 50% at 50% 118%,rgba(122,46,46,.22) 0%,rgba(42,28,28,0) 70%),
+    var(--tinta)}
+.hero .fresta{position:absolute;left:50%;top:0;width:1px;height:74px;
+  transform:translateX(-50%);
+  background:linear-gradient(180deg,rgba(224,178,110,0),rgba(224,178,110,.95) 55%,rgba(224,178,110,0))}
+.hero .bloco{position:relative;width:100%;max-width:820px;padding:96px 28px 88px;
+  display:flex;flex-direction:column;align-items:center;gap:26px}
+.hero h1{font-family:Fraunces,Georgia,serif;font-weight:500;
+  font-size:clamp(34px,5vw,64px);line-height:1.03;letter-spacing:-.012em;
+  color:var(--papel)}
+.hero h1 em{font-style:normal;color:var(--rosa)}
+.hero .sub{font-size:clamp(16px,1.6vw,17.5px);line-height:1.62;
+  color:rgba(247,238,230,.82);max-width:56ch}
+.hero .ancora{font-family:Fraunces,Georgia,serif;font-size:clamp(18.5px,2.2vw,24px);
+  line-height:1.4;color:var(--rosa);max-width:44ch}
+.hero .filete{width:52px;height:1px;background:rgba(176,131,80,.75)}
+.hero .bul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;
+  gap:15px;max-width:60ch;text-align:left}
+.hero .bul li{position:relative;padding-left:26px;font-size:clamp(15.5px,1.5vw,17px);
+  line-height:1.55;color:rgba(247,238,230,.78)}
+.hero .bul li b{font-weight:400;color:var(--papel)}
+.hero .bul li::before{position:absolute;left:0;top:.6em;content:"";width:7px;height:7px;
+  border-radius:50%;background:var(--sepia)}
+/* sem botao no topo: publico frio precisa do argumento antes da oferta.
+   a seta so diz que a pagina continua. */
+.hero .seta{width:1px;height:34px;margin-top:6px;
+  background:linear-gradient(180deg,rgba(224,178,110,.75),rgba(224,178,110,0))}
+@media (max-width:760px){
+  .hero{min-height:auto}
+  .hero .bloco{padding:64px 22px 56px;gap:20px}
+  .hero .sub,.hero .ancora{max-width:none}
+}
+.marca{font-family:Fraunces,Georgia,serif;font-size:12px;letter-spacing:.46em;
+  text-transform:uppercase;color:var(--rosa);text-indent:.46em}
+
+.cit{border-left:2px solid var(--vinho);padding:4px 0 4px 22px}
+.cit p{font-family:Fraunces,Georgia,serif;font-size:clamp(19px,2.1vw,23px);
+  line-height:1.42;color:var(--vinho)}
+
+/* Os quatro passos como faixa: as palavras e a ordem, sem a definicao de cada
+   uma. A definicao e o que ela compra. */
+.passos{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));
+  border-top:1px solid rgba(176,131,80,.45);border-bottom:1px solid rgba(176,131,80,.45)}
+.passos > div{display:flex;flex-direction:column;align-items:center;gap:10px;
+  padding:26px 10px 28px;font-family:Fraunces,Georgia,serif;
+  font-size:clamp(15px,1.7vw,19px);text-align:center;
+  border-right:1px solid rgba(176,131,80,.28)}
+.passos > div:last-child{border-right:none}
+.passos span{font-family:Fraunces,Georgia,serif;font-size:clamp(34px,4.4vw,52px);
+  line-height:1;color:var(--vinho)}
+@media (max-width:560px){.passos > div{padding:20px 6px 22px;gap:7px}}
+.card{background:var(--papel-prof);padding:30px 26px 34px;display:flex;
+  flex-direction:column;gap:12px}
+.card .letra{font-family:Fraunces,Georgia,serif;font-size:54px;line-height:1;
+  color:var(--vinho)}
+.card .nome{font-family:Fraunces,Georgia,serif;font-size:22px}
+.card .txt{font-size:15.5px;line-height:1.55;color:rgba(42,28,28,.78)}
+
+.fshi{border:1px solid rgba(176,131,80,.45);background:var(--papel-rosa)}
+.fshi .l{display:flex;padding:16px 20px;gap:18px;
+  border-bottom:1px solid rgba(176,131,80,.28)}
+.fshi .l:last-child{border-bottom:none}
+.fshi .k{font-family:Fraunces,Georgia,serif;font-size:13px;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--vinho);width:122px;flex-shrink:0}
+.fshi .v{font-size:16px;line-height:1.5}
+
+.placa{border-top:2px solid var(--vinho);background:var(--papel-rosa);
+  padding:22px 20px 26px;display:flex;align-items:center;min-height:118px}
+.placa .t{font-family:Fraunces,Georgia,serif;font-size:21px;line-height:1.3}
+.placa .f{font-size:15px;line-height:1.5;color:rgba(42,28,28,.72);margin-top:12px}
+.placa.destaque{border-top-color:var(--sepia);background:var(--tinta)}
+.placa.destaque .t{color:var(--papel)}
+.placa.destaque .f{color:rgba(247,238,230,.8)}
+
+.lista .i{font-size:16.5px;line-height:1.58}
+
+/* Listas de qualificacao: ponto vinho na de cima, traco apagado na de baixo,
+   para a lista negativa nao ler como lista de beneficios. */
+.qual{display:flex;flex-direction:column;gap:13px;list-style:none;padding:0;margin:0}
+.qual li{position:relative;padding-left:24px;font-size:16.5px;line-height:1.55}
+.qual li::before{position:absolute;left:0;top:.62em;content:"";
+  width:7px;height:7px;border-radius:50%;background:var(--vinho)}
+.qual.nao li::before{top:.78em;width:11px;height:1.5px;border-radius:0;
+  background:rgba(42,28,28,.34)}
+
+/* Paginas internas: o mockup prova que existe, a pagina prova que serve. */
+.interna{display:flex;flex-direction:column;gap:14px}
+.interna .quadro{position:relative;border:1px solid rgba(176,131,80,.42);
+  box-shadow:0 10px 26px rgba(58,38,32,.13),0 2px 5px rgba(58,38,32,.08)}
+.interna .quadro img{width:100%;height:auto;display:block}
+/* o esmaecido embaixo diz "tem mais" sem entregar o que vem depois */
+.interna .quadro::after{content:"";position:absolute;left:0;right:0;bottom:0;height:34%;
+  background:linear-gradient(180deg,rgba(247,238,230,0),rgba(247,238,230,.92))}
+.interna .leg b{display:block}
+.interna .leg{font-size:14.5px;line-height:1.5;color:rgba(42,28,28,.78)}
+.interna .leg b{font-weight:600;color:var(--tinta);display:block;
+  font-family:Fraunces,Georgia,serif;font-size:16.5px;margin-bottom:3px}
+.divisor{border-left:1px solid rgba(176,131,80,.4);padding-left:48px}
+
+.oferta{display:grid;grid-template-columns:minmax(0,460px) minmax(0,1fr);
+  gap:clamp(28px,4vw,56px);align-items:start}
+.oferta > img{position:sticky;top:40px}
+.item{padding:18px 0;border-bottom:1px solid rgba(176,131,80,.4)}
+.item .t{font-family:Fraunces,Georgia,serif;font-size:20px;display:flex;
+  align-items:baseline;flex-wrap:wrap;gap:0 10px}
+.item .anc{margin-left:auto;font-family:'IBM Plex Sans',system-ui,sans-serif;
+  font-size:14px;color:var(--suave);white-space:nowrap}
+.item .d{font-size:15.5px;line-height:1.55;color:rgba(42,28,28,.75);margin-top:6px}
+.item .d b{font-weight:600;color:var(--tinta)}
+.chip{display:inline-block;margin-right:9px;padding:3px 8px 2px;background:var(--vinho);
+  color:var(--papel);font-family:'IBM Plex Sans',system-ui,sans-serif;font-size:9.5px;
+  letter-spacing:.16em;text-transform:uppercase;font-weight:600;vertical-align:middle;
+  border-radius:2px}
+.stack{border-top:1px solid rgba(176,131,80,.4);padding-top:16px;
+  display:flex;flex-direction:column;gap:9px}
+.stack .l{display:flex;align-items:baseline;justify-content:space-between;gap:16px;
+  font-size:15px;color:var(--suave)}
+.stack .l b{font-weight:400;white-space:nowrap}
+.stack .hoje{color:var(--tinta);font-size:16px}
+.stack .hoje b{font-weight:600;color:var(--vinho)}
+.preco{font-family:Fraunces,Georgia,serif;font-size:clamp(44px,5vw,58px);
+  line-height:1;color:var(--vinho)}
+.garantia{border:1px solid rgba(176,131,80,.5);background:var(--papel-rosa);
+  padding:20px 24px;display:flex;gap:20px;align-items:center}
+.garantia .n{font-family:Fraunces,Georgia,serif;font-size:17px;line-height:1.15;
+  color:var(--vinho);text-align:center;width:56px;flex-shrink:0}
+.garantia .n span{font-size:10.5px;letter-spacing:.14em;text-transform:uppercase}
+.garantia .d{font-size:15.5px;line-height:1.6;color:rgba(42,28,28,.85)}
+
+.faq .p{font-family:Fraunces,Georgia,serif;font-size:19px;line-height:1.35}
+.faq .r{font-size:16px;line-height:1.62;color:rgba(42,28,28,.78);margin-top:8px}
+
+.rodape{background:var(--tinta);border-top:1px solid rgba(176,131,80,.3);
+  padding:40px 0 48px;text-align:center}
+.rodape .l{font-size:13px;line-height:1.6;color:rgba(247,238,230,.52)}
+.rodape .m{font-family:Fraunces,Georgia,serif;font-size:13px;letter-spacing:.5em;
+  text-transform:uppercase;color:var(--sepia);text-indent:.5em}
+
+@media (max-width:900px){
+  /* no celular o texto vem antes da foto; no computador a foto fica a esquerda
+     porque ela olha para a direita, ou seja, para dentro da pagina */
+  .olhar{align-items:start!important}
+  .olhar img{order:2;min-height:0!important;aspect-ratio:5/4}
+  .g4{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .g3,.g2,.oferta{grid-template-columns:minmax(0,1fr)}
+  .oferta{gap:34px}
+  .divisor{border-left:none;border-top:1px solid rgba(176,131,80,.4);
+    padding-left:0;padding-top:28px}
+}
+@media (max-width:560px){
+  body{font-size:16.5px}
+  .g4{grid-template-columns:1fr}
+  .cta{width:100%;display:block;padding:19px 20px;font-size:17px}
+  .fshi .k{width:88px;font-size:12.5px}
+  .sec{padding:46px 0}
+}
+</style>
+<!-- pixel do Meta entra aqui quando o ID chegar -->
+</head>
+<body>
+
+<header class="hero">
+  <div class="fresta"></div>
+  <div class="bloco">
+    <div class="marca">A Fresta</div>
+    <h1>O padrão começa muito antes do dia em que ele some.</h1>
+    <div class="filete"></div>
+    <p class="sub">Ele começa num instante de poucos segundos, que tem hora marcada e passa quase sempre despercebido. Depois que você aprende a reconhecer esse instante, fica difícil deixar ele passar de novo.</p>
+    <ul class="bul">
+      <li>Você relê a conversa inteira procurando onde errou. <b>Aqui você aprende a separar o que aconteceu do que a sua cabeça criou na hora.</b></li>
+      <li>Você responde o áudio de madrugada em trinta segundos. <b>Aqui a resposta já está escolhida antes de ele mandar.</b></li>
+      <li>Você explica pra amiga por que dessa vez é diferente. <b>Aqui você tem como checar isso sozinha, sem depender do que ela acha.</b></li>
+    </ul>
+    <div class="seta" aria-hidden="true"></div>
+  </div>
+</header>
+
+<section class="sec">
+  <div class="wrap grade g2" style="align-items:center;gap:clamp(28px,4vw,64px)">
+    <img src="celular.jpg" width="800" height="459" alt="Mão pegando o celular de madrugada às 2h47" style="border-radius:2px">
+    <div class="col g18">
+      <div class="rot">A cena</div>
+      <p class="disp" style="font-size:clamp(24px,3vw,30px);line-height:1.3">São 2h47 da madrugada de uma sexta. O celular vibra.</p>
+      <p>Um áudio de vinte segundos: <em>“não paro de pensar em você, é engraçado, nunca senti isso por ninguém antes.”</em> Seu peito aperta na mesma hora.</p>
+      <p>E uma parte sua, bem no fundo, já sabe: isso já aconteceu antes. Com outro nome, outro rosto salvo em outro número.</p>
+      <div class="cit"><p>O problema nunca foi falta de sinal. Você reconheceu o sinal. Só decidiu, sem perceber, que ele não contava.</p></div>
+    </div>
+  </div>
+  <div class="wrap" style="margin-top:clamp(34px,4vw,52px)">
+    <div class="grade g2" style="gap:14px clamp(28px,4vw,64px);border-top:1px solid rgba(176,131,80,.4);padding-top:26px">
+      <div class="lista"><div class="i">Você já releu uma conversa inteira procurando onde errou.</div></div>
+      <div class="lista"><div class="i">Você já checou se ele viu a mensagem e não respondeu.</div></div>
+      <div class="lista"><div class="i">Você já ensaiou o que ia dizer se ele voltasse.</div></div>
+      <div class="lista"><div class="i">Você já explicou pra uma amiga por que dessa vez era diferente.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- A foto dela mora aqui, nao no topo: e o momento em que a pagina para de
+     apontar a dor e passa a explicar. Rosto humano ajuda a dizer "alguem entende". -->
+<section class="sec prof">
+  <div class="wrap grade g2 olhar" style="align-items:stretch;gap:clamp(30px,4.5vw,64px)">
+    <img src="mulher-d.jpg" width="1700" height="1511" alt="Mulher sentada à janela, olhando para fora"
+      style="border-radius:2px;height:100%;min-height:clamp(300px,34vw,440px);object-fit:cover;object-position:58% 14%">
+    <div class="col g22" style="justify-content:center">
+      <div class="rot">Não é só você</div>
+      <h2 style="font-size:clamp(24px,3.2vw,33px);line-height:1.22">O seu cérebro reconhece o familiar antes de reconhecer o que é bom.</h2>
+      <p>Se amor, em algum momento da sua vida, veio junto com <strong>espera</strong>, <strong>ausência</strong> ou <strong>instabilidade</strong>, seu corpo aprendeu que é assim que amor se parece. E passou a confundir alerta com desejo, cada vez com mais facilidade.</p>
+      <p>Você pode saber tudo isso na cabeça. Ter lido sobre apego ansioso, ter feito terapia, ter dito pra outras mulheres exatamente o que elas deveriam fazer. E ainda assim, quando o áudio chega às 2h47, o coração dispara do mesmo jeito.</p>
+      <p class="disp" style="font-size:clamp(18px,2vw,21px);line-height:1.45;color:var(--vinho)">Porque o padrão não mora só na cabeça. Mora no corpo. E o corpo repete o que já foi repetido antes.</p>
+    </div>
+  </div>
+</section>
+
+<!-- A foto do selo em suas proporcoes certas, como prancha sobre a tinta:
+     era fundo esticado sob um veu de 96%, e virava um borrao vermelho. -->
+<section class="sec" style="background:var(--tinta)">
+  <div class="wrap grade g2" style="align-items:center;gap:clamp(32px,5vw,72px)">
+    <div class="col g18">
+      <div class="rot claro">O conceito</div>
+      <h2 style="font-size:clamp(32px,4.4vw,46px);color:var(--papel)">A Rachadura</h2>
+      <p style="color:rgba(247,238,230,.88)">É o momento em que a realidade e a história que você conta sobre ela começam a se separar. Acontece muito antes do fim da relação, e é o único ponto em que ainda dá pra escolher diferente.</p>
+      <p style="color:rgba(247,238,230,.88)">Toda relação tem rachadura. O que separa uma que machuca de uma saudável é o que acontece depois que ela aparece.</p>
+      <p class="disp" style="font-size:clamp(18px,2vw,21px);line-height:1.45;color:var(--rosa)">O selo continua inteiro por fora. A fenda já atravessou ele todo.</p>
+    </div>
+    <img src="rachadura.jpg" width="760" height="1133" alt="Parede escura atravessada por uma fenda dourada" style="width:100%;max-width:400px;justify-self:center;aspect-ratio:3/4;object-fit:cover;object-position:50% 42%">
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap col g30">
+    <div class="col g18 centro">
+      <div class="rot">O método</div>
+      <h2 style="font-size:clamp(27px,4vw,40px);line-height:1.16">Quatro passos, nessa ordem</h2>
+      <p style="max-width:720px;text-align:center">Cada etapa depende da anterior. Você não consegue <strong>Resistir</strong> a um padrão que ainda não <strong>Admitiu</strong>. E não consegue <strong>Admitir</strong> um padrão que ainda não aprendeu a <strong>Perceber</strong>.</p>
+    </div>
+    <div class="passos">
+      <div><span>P</span>Perceber</div>
+      <div><span>A</span>Admitir</div>
+      <div><span>R</span>Resistir</div>
+      <div><span>E</span>Escolher</div>
+    </div>
+    <p class="disp centro" style="max-width:640px;margin:0 auto;text-align:center;font-size:clamp(17px,1.9vw,20px);line-height:1.45;color:var(--vinho)"><strong style="font-weight:500">Escolher</strong> é o que sobra quando os três primeiros já aconteceram. E é a única parte que ninguém pode fazer por você.</p>
+    <p style="max-width:680px;margin:0 auto;text-align:center;color:var(--suave);font-size:15.5px;line-height:1.6">O primeiro passo tem uma ferramenta de quatro linhas que separa o que aconteceu do que a sua cabeça criou na hora. Ela está no e-book, com um exercício pra fazer antes de virar a página.</p>
+  </div>
+</section>
+
+<section class="sec prof">
+  <div class="wrap col g30 centro">
+    <div class="col g14 centro">
+      <div class="rot">As quatro placas</div>
+      <h2 style="font-size:clamp(26px,3.8vw,38px);line-height:1.2;text-align:center">Os quatro disfarces que o padrão usa</h2>
+      <p style="max-width:660px;text-align:center">Cada um deles tem uma frase que você já disse em voz alta, defendendo a relação pra alguém. O capítulo 2 mostra as quatro, e o que observar em cada uma.</p>
+    </div>
+    <div class="grade g4" style="gap:clamp(14px,1.8vw,22px)">
+      <div class="placa"><div class="t">Instabilidade vestida de Intensidade</div></div>
+      <div class="placa"><div class="t">Ambiguidade vestida de Profundidade</div></div>
+      <div class="placa"><div class="t">Controle vestido de Cuidado</div></div>
+      <div class="placa destaque"><div class="t">Potencial vestido de Futuro</div></div>
+    </div>
+    <a class="cta" href="#comprar" style="align-self:center">Quero aplicar o Método PARE</a>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap grade g2" style="gap:clamp(30px,5vw,72px)">
+    <div class="col g14">
+      <h3 style="font-size:26px">É pra você se</h3>
+      <ul class="qual">
+        <li>Já perdeu a conta de quantas vezes se envolveu com o mesmo tipo de parceiro</li>
+        <li>Sabe que existe um padrão, mas nunca conseguiu nomear ele com clareza</li>
+        <li>Entende tudo com a cabeça e mesmo assim age diferente quando ele aparece</li>
+        <li>Quer uma ferramenta pra usar no momento certo, não mais uma teoria pra concordar</li>
+        <li>Está disposta a se olhar de frente, mesmo quando dói</li>
+      </ul>
+    </div>
+    <div class="col g14 divisor">
+      <h3 style="font-size:26px;color:var(--vinho)">Não é pra você se</h3>
+      <ul class="qual nao" style="color:rgba(42,28,28,.82)">
+        <li>Está numa situação de violência ou risco agora. Aí a prioridade é proteção e ajuda especializada, não leitura</li>
+        <li>Procura a mensagem certa pra fazer ele voltar, ou pra controlar a reação dele</li>
+        <li>Espera uma fórmula pra parar de sentir, ou pra esquecer alguém em poucos dias</li>
+        <li>Quer que um material educativo substitua terapia ou acompanhamento profissional</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="sec esc" style="padding:clamp(46px,6vw,66px) 0">
+  <div class="wrap col g30">
+    <div class="rot claro">O que você sai sabendo</div>
+    <div class="grade g3" style="gap:clamp(24px,4vw,48px)">
+      <div class="col g14"><div class="disp" style="font-size:17px;color:var(--sepia)">01</div>
+        <div style="font-size:16.5px;line-height:1.6;color:rgba(247,238,230,.9)">Como reconhecer os gatilhos e os movimentos que sustentam o seu padrão, sem transformar hipótese em fato</div></div>
+      <div class="col g14"><div class="disp" style="font-size:17px;color:var(--sepia)">02</div>
+        <div style="font-size:16.5px;line-height:1.6;color:rgba(247,238,230,.9)">Como perceber a ativação antes de agir só para aliviar a ansiedade ou recuperar a conexão</div></div>
+      <div class="col g14"><div class="disp" style="font-size:17px;color:var(--sepia)">03</div>
+        <div style="font-size:16.5px;line-height:1.6;color:rgba(247,238,230,.9)">Como usar quatro passos e três ferramentas para escolher uma resposta que você reconheça como sua</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap col g30">
+    <div class="col g18 centro">
+      <div class="rot">Por dentro</div>
+      <h2 style="font-size:clamp(26px,3.8vw,38px);line-height:1.18;text-align:center">Não é um PDF pra concordar.<br>É um material pra usar.</h2>
+      <p style="max-width:600px;text-align:center">Um pedaço de cada um dos três arquivos.</p>
+    </div>
+    <div class="grade g3" style="gap:clamp(20px,2.6vw,32px)">
+      <div class="interna">
+        <div class="quadro"><img src="interna-1.jpg" width="640" height="392" alt="Abertura de capítulo do e-book"></div>
+        <div class="leg"><b>O e-book</b>Quatro capítulos, diagramados de verdade</div></div>
+      <div class="interna">
+        <div class="quadro"><img src="interna-2.jpg" width="640" height="392" alt="Página de registro do Diário da Rachadura"></div>
+        <div class="leg"><b>O Diário</b>Trinta registros pra preencher no dia</div></div>
+      <div class="interna">
+        <div class="quadro"><img src="interna-3.jpg" width="640" height="392" alt="Página do Guia de Respostas"></div>
+        <div class="leg"><b>O Guia</b>Seis situações, com resposta decidida antes</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="oferta" class="sec prof">
+  <div class="wrap oferta">
+    <img src="conjunto.jpg" width="1240" height="780" alt="O e-book Pare de Amar Quem Te Machuca com o Diário da Rachadura e o Guia de Respostas">
+    <div class="col g22">
+      <div class="rot">O que você recebe</div>
+      <div class="col" style="border-top:1px solid rgba(176,131,80,.4)">
+        <div class="item"><div class="t">O e-book do Método PARE<span class="anc">R$ 47</span></div><div class="d">O método completo, com exercício em cada etapa e <b>três ferramentas prontas</b> pra usar na hora. 40 páginas.</div></div>
+        <div class="item"><div class="t"><span class="chip">Bônus</span>Diário da Rachadura<span class="anc">R$ 27</span></div><div class="d">Um caderno pra escrever <b>na hora em que doer</b>. 30 páginas com os campos prontos, e uma parada a cada sete pra ver o que se repetiu.</div></div>
+        <div class="item"><div class="t"><span class="chip">Bônus</span>Guia de Respostas para Quando Ele Voltar<span class="anc">R$ 37</span></div><div class="d">As <b>seis formas</b> que ele usa pra reaparecer, com três respostas prontas pra cada uma. Você escolhe a sua hoje, com calma.</div></div>
+      </div>
+      <div class="stack">
+        <div class="l"><span>Vendidos separados, os três sairiam por</span><b>R$ 111</b></div>
+      </div>
+      <div style="font-size:13.5px;line-height:1.6;color:var(--suave)">São <b style="font-weight:600;color:var(--tinta)">três arquivos em PDF</b>, no seu e-mail, logo depois do pagamento.</div>
+      <div class="col" style="gap:8px">
+        <div style="display:flex;align-items:baseline;gap:16px;flex-wrap:wrap">
+          <div class="preco" id="comprar">R$ 39,90</div>
+          <div style="font-size:14.5px;line-height:1.45;color:var(--suave)">+ R$ 0,99 de taxa de serviço<br>da plataforma</div>
+        </div>
+        <div style="font-size:14px;letter-spacing:.05em;color:var(--suave)">Pagamento único · Acesso imediato</div>
+      </div>
+      <p class="disp" style="font-size:20px;line-height:1.45">O padrão que ele te ajuda a enxergar já custou meses.</p>
+      <a class="cta larga" href="https://pay.cakto.com.br/c6cmy35_1097371">Garantir meu acesso agora</a>
+      <div class="garantia">
+        <div class="n">7<br><span>dias</span></div>
+        <div class="d">Sete dias para conhecer o material, experimentar as ferramentas e decidir se ele faz sentido pra você. Se não fizer, é só pedir o reembolso dentro do prazo. Sem perguntas.</div>
+      </div>
+      <div style="font-size:14px;line-height:1.6;color:var(--suave)">Este é um material educativo. Ele não substitui acompanhamento psicológico ou psiquiátrico.</div>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap grade g2" style="gap:clamp(30px,5vw,72px);align-items:start">
+    <div class="col g18">
+      <div class="rot">Por que confiar no método</div>
+      <p>O Método PARE é uma ferramenta educativa de reflexão e escolha. Cada etapa organiza uma contribuição da pesquisa em psicologia, com a referência ao autor original no fim do e-book.</p>
+      <div class="col" style="gap:13px;border-top:1px solid rgba(176,131,80,.4);padding-top:20px">
+        <div style="font-size:16px;line-height:1.55"><strong style="font-weight:600">Bowlby e Ainsworth.</strong> Como experiências de vínculo moldam o que o corpo espera de segurança</div>
+        <div style="font-size:16px;line-height:1.55"><strong style="font-weight:600">Festinger.</strong> Como ajustamos a interpretação para reduzir uma contradição desconfortável</div>
+        <div style="font-size:16px;line-height:1.55"><strong style="font-weight:600">Skinner.</strong> Como a imprevisibilidade fortalece a repetição de um comportamento</div>
+        <div style="font-size:16px;line-height:1.55"><strong style="font-weight:600">Arkes e Blumer.</strong> Por que tempo, energia e afeto já investidos dificultam uma decisão</div>
+        <div style="font-size:16px;line-height:1.55"><strong style="font-weight:600">Frankl.</strong> A responsabilidade de escolher a resposta mesmo sem controlar o outro</div>
+      </div>
+      <p style="font-size:15.5px;color:var(--suave)">Esses autores ajudam a entender mecanismos. O Método PARE não diagnostica você, ele ou a relação.</p>
+    </div>
+    <div class="col g18 faq">
+      <div class="rot">Perguntas antes de decidir</div>
+      <div class="col" style="gap:20px">
+        <div><div class="p">Mas eu ainda amo ele. Isso é pra mim?</div><div class="r">É exatamente pra você. Sentimento não obedece a decisão, e o método não pede que você pare de sentir. Ele serve pra que o que você sente pare de decidir sozinho o que você faz. Dá pra amar alguém e ainda assim não se abandonar.</div></div>
+        <div><div class="p">Isso vai me ensinar a fazer ele voltar?</div><div class="r">Não. E se essa for a sua expectativa, é melhor não comprar. Nenhuma das respostas aqui foi escrita pra produzir reação nele. Elas foram escritas pra você não se trair na hora em que ele voltar.</div></div>
+        <div><div class="p">R$ 39,90 resolve um negócio tão grande assim?</div><div class="r">Sozinho, não. Um padrão que levou anos pra se formar não desmancha com um PDF, e quem promete isso está te vendendo alívio. O que R$ 39,90 compra é o nome do que acontece com você e um passo a passo pra usar na próxima vez. É bem mais do que você tem hoje às 2h47.</div></div>
+        <div><div class="p">Eu já sei que tenho esse padrão. Ler vai mudar alguma coisa?</div><div class="r">Saber é a parte que você já fez, e ela não te salvou até agora. A distância que dói fica entre saber e conseguir agir diferente no minuto em que a mensagem chega. O método existe pra fechar essa distância, com uma pergunta pra fazer no lugar de uma teoria pra concordar.</div></div>
+        <div><div class="p">E se não for pra mim?</div><div class="r">Você tem sete dias. Escreve pra tm.marketingbr@gmail.com pedindo o reembolso e a gente devolve, sem você precisar explicar nada.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="background:var(--tinta);background-image:radial-gradient(72% 120% at 50% 0%,rgba(122,46,46,.42) 0%,rgba(42,28,28,0) 70%);padding:clamp(60px,9vw,100px) 0 clamp(56px,8vw,92px)">
+  <div class="wrap estreito col g22 centro" style="max-width:720px">
+    <h2 style="font-size:clamp(30px,4.4vw,46px);line-height:1.14;color:var(--papel)">Você não precisa parar de amar.</h2>
+    <p class="disp" style="font-size:clamp(22px,3.2vw,32px);line-height:1.26;color:var(--rosa)">Você precisa parar de se abandonar.</p>
+    <a class="cta" href="https://pay.cakto.com.br/c6cmy35_1097371">Quero o método por R$ 39,90</a>
+    <div class="selo">Acesso imediato · Garantia de 7&nbsp;dias</div>
+  </div>
+</section>
+
+<footer class="rodape">
+  <div class="wrap col g14 centro">
+    <div class="m">A Fresta</div>
+    <div class="l">Material educativo. Não substitui acompanhamento psicológico ou psiquiátrico profissional.</div>
+    <div class="l">Em situação de violência: Central de Atendimento à Mulher, 180. Apoio emocional: CVV, 188.</div>
+    <div class="l">Dúvidas: <a href="mailto:tm.marketingbr@gmail.com" style="color:rgba(247,238,230,.72)">tm.marketingbr@gmail.com</a></div>
+  </div>
+</footer>
+
+<script>
+/* Repassa a origem do clique para o checkout.
+   Os links da Cakto sao estaticos: sem isto, a venda chega na Cakto sem
+   utm_source/campaign/content e sem fbclid, e nao da para saber qual criativo
+   vendeu. Aqui os parametros da URL de entrada sao copiados para cada link do
+   checkout, no momento do clique (nao na carga), para pegar tambem quem chegou
+   por historico. */
+(function(){
+  var GUARDAR = ['utm_source','utm_medium','utm_campaign','utm_content','utm_term',
+                 'fbclid','gclid','ttclid','src','sck'];
+  var entrada = new URLSearchParams(location.search);
+  var carga = {};
+  GUARDAR.forEach(function(k){ if (entrada.get(k)) carga[k] = entrada.get(k); });
+  try {
+    if (Object.keys(carga).length) sessionStorage.setItem('af_origem', JSON.stringify(carga));
+    else { var g = sessionStorage.getItem('af_origem'); if (g) carga = JSON.parse(g); }
+  } catch (e) {}
+  if (!Object.keys(carga).length) return;
+  document.addEventListener('click', function(ev){
+    var a = ev.target.closest && ev.target.closest('a[href*="pay.cakto.com.br"]');
+    if (!a) return;
+    var u = new URL(a.href);
+    Object.keys(carga).forEach(function(k){ if (!u.searchParams.get(k)) u.searchParams.set(k, carga[k]); });
+    a.href = u.toString();
+  }, true);
+})();
+</script>
+</body>
+</html>
